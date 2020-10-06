@@ -32,7 +32,7 @@ extension EthereumBloomFilter {
     }
     
     static func bloom9(_ data: Data) -> BigUInt {
-        let b = data.sha3(.keccak256)
+        var b = data.sha3(.keccak256)
         var r = BigUInt(0)
         let mask = BigUInt(2047)
         for i in stride(from: 0, to: 6, by: 2) {

@@ -32,6 +32,7 @@ public class ERC20: IERC20 {
     
     public var transactionOptions: TransactionOptions
     public var web3: web3
+    public var provider: Web3Provider
     public var address: EthereumAddress
     
     lazy var contract: web3.web3contract = {
@@ -40,8 +41,9 @@ public class ERC20: IERC20 {
         return contract!
     }()
     
-    public init(web3: web3, address: EthereumAddress) {
+    public init(web3: web3, provider: Web3Provider, address: EthereumAddress) {
         self.web3 = web3
+        self.provider = provider
         self.address = address
         var mergedOptions = web3.transactionOptions
         mergedOptions.to = address

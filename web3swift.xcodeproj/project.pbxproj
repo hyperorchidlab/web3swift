@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -187,6 +187,11 @@
 		3AA816382276E48400F5DB52 /* web3swift_Websockets_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA816232276E48400F5DB52 /* web3swift_Websockets_Tests.swift */; };
 		3AA8163A2276E4AE00F5DB52 /* SECP256k1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA816392276E4AE00F5DB52 /* SECP256k1.swift */; };
 		3AEF4ABF22C0B6BE00AC7929 /* Web3+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF4ABE22C0B6BE00AC7929 /* Web3+Constants.swift */; };
+		697696FB26819C0400D46146 /* SipHash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697696F626819C0400D46146 /* SipHash.xcframework */; };
+		697696FD26819C0400D46146 /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697696F726819C0400D46146 /* PromiseKit.xcframework */; };
+		697696FF26819C0400D46146 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697696F826819C0400D46146 /* Starscream.xcframework */; };
+		6976970126819C0400D46146 /* CryptoSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697696F926819C0400D46146 /* CryptoSwift.xcframework */; };
+		6976970326819C0400D46146 /* BigInt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697696FA26819C0400D46146 /* BigInt.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -380,6 +385,11 @@
 		3AA8163F2276E5A800F5DB52 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		3AA816412276E5A900F5DB52 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3AEF4ABE22C0B6BE00AC7929 /* Web3+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Web3+Constants.swift"; sourceTree = "<group>"; };
+		697696F626819C0400D46146 /* SipHash.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SipHash.xcframework; path = Carthage/Build/SipHash.xcframework; sourceTree = "<group>"; };
+		697696F726819C0400D46146 /* PromiseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PromiseKit.xcframework; path = Carthage/Build/PromiseKit.xcframework; sourceTree = "<group>"; };
+		697696F826819C0400D46146 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = Carthage/Build/Starscream.xcframework; sourceTree = "<group>"; };
+		697696F926819C0400D46146 /* CryptoSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CryptoSwift.xcframework; path = Carthage/Build/CryptoSwift.xcframework; sourceTree = "<group>"; };
+		697696FA26819C0400D46146 /* BigInt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BigInt.xcframework; path = Carthage/Build/BigInt.xcframework; sourceTree = "<group>"; };
 		69FA41862403CC5D005CF3FA /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -388,7 +398,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6976970326819C0400D46146 /* BigInt.xcframework in Frameworks */,
+				697696FB26819C0400D46146 /* SipHash.xcframework in Frameworks */,
 				13C3392821B6C68900F33F5E /* secp256k1.framework in Frameworks */,
+				6976970126819C0400D46146 /* CryptoSwift.xcframework in Frameworks */,
+				697696FF26819C0400D46146 /* Starscream.xcframework in Frameworks */,
+				697696FD26819C0400D46146 /* PromiseKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +557,11 @@
 		13C3392721B6C68900F33F5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				697696FA26819C0400D46146 /* BigInt.xcframework */,
+				697696F926819C0400D46146 /* CryptoSwift.xcframework */,
+				697696F726819C0400D46146 /* PromiseKit.xcframework */,
+				697696F626819C0400D46146 /* SipHash.xcframework */,
+				697696F826819C0400D46146 /* Starscream.xcframework */,
 				13A8D5BD21B9296B00469740 /* CoreImage.framework */,
 			);
 			name = Frameworks;
@@ -1120,6 +1140,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/BigInt.framework",
+				"$(SRCROOT)/Carthage/Build/CryptoSwift.framework",
+				"$(SRCROOT)/Carthage/Build/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/SipHash.framework",
+				"$(SRCROOT)/Carthage/Build/Starscream.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1453,9 +1478,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Carthage/Build/iOS";
-				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build/iOS";
-				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)/Carthage/Build/Mac";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Carthage/Build";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build";
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)/Carthage/Build";
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1502,9 +1527,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Carthage/Build/iOS";
-				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build/iOS";
-				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)/Carthage/Build/Mac";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Carthage/Build";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build";
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)/Carthage/Build";
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
